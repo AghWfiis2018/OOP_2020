@@ -1,0 +1,10 @@
+W zadaniu należy skonstruować logiczna hierarchie klas na podstawie poniższego programu. Proszę zauważyć, ze PredkoscMaksymalna to osobna klasa (wraper na float) służąca do przechowywania prędkości w km/h.
+
+Zadanie ma na celu pokazać problemy związane z dziedziczeniem wielokrotnym, które mogą się pojawiać; oraz wyjaśnić, dlaczego należy uważać przy próbach projektowania kodu, gdzie może wystąpić struktura diamentu.
+
+Proszę nie implementować pol w klasach bazowych jeżeli nie są one tam wymagane (na podstawie poniższego kodu).
+
+UWAGA:
+
+    Rower nie ma prędkości maksymalnej (jest ona określona przez zdolności rowerzysty).
+    Proszę nie używać przyjaźni jeżeli to nie jest potrzebne (w zadaniu nie jest).

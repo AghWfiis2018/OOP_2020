@@ -1,0 +1,12 @@
+Zadanie polega na użyciu kontenerów i algorytmów z biblioteki standardowej. Do napisania jest kilka klas dziedziczących po klasie Zwierz, oraz kontener Farma.
+
+W domu proszę spróbować zaimplementować kontener z użyciem std::shared_ptr zamiast std::unique_ptr (plik main.cpp będzie trzeba wtedy zmodyfikować, w tym zamienić zwracanie surowych wskaźników na Owce na std::shared_ptr<Zwierz> i dodać rzutowanie; zainteresowanych proszę o kontakt priv pod koniec zajęć).
+
+UWAGA:
+
+    W zadaniu nie wolno używać standardowych pętli z języka C: for(;;), while(), do ... while().
+    Pętla zakresowa for(:) jest ok.
+    Do zliczania imion można skorzystać ze specjalnego kontenera lub funkcji sortujących.
+    Zwierzęta mogą być zaimplementowane w jednym pliku. 
+    Destruktor Farmy jest zdefiniowany w pliku main.cpp. Trzeba pamiętać o napisaniu jego deklaracji wewnątrz klasy.
+    Można korzystać z dokumentacji języka C++ (szczególnie informacje o kontenerach)

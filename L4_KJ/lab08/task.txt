@@ -1,0 +1,16 @@
+Zadanie polega na napisaniu hierarchii klas obrazujących pliki w systemie.
+Klasą bazową jest MyItem, której implementacja jest podana.
+Do napisania są dwie klasy pochodne:
+
+    MyFile - prosta klasa, która poza nazwą ma zawartość pliku.
+    MyDir - trudniejsza klasa, która jest kontenerem na pliki i foldery. Trzeba dla niej zaimplementować mechanizm kopiowania i przenoszenia.
+
+Dodatkową klasą którą trzeba napisać jest klasa MyUnique, będący sprytnym wskaźnikiem. Jest to wskaźnik typu unique - czyli w danym momencie tylko jeden obiekt MyUnique może trzymać wskaźnik do MyItem, kopiowanie MyUnique jest zabronione. Gdy obiekt MyUnique zostaje skasowany, wraz z nim kasuję się obiekt do którego trzymany jest wskaźnik.
+
+UWAGA:
+
+    Destruktor klasy MyDir musi być pusty. Należy wykorzystać pomocniczą klasę MyUnique do zarządzania pamięcią.
+    Funkcję clone najłatwiej jest zaimplementować używając konstruktor kopiujący.
+    Po zdefiniowaniu MY_EXPECTED_ERROR kompilacja nie powinna się powieść. W przeciwnym wypadku za wykonanie zadanie zostanie odjęty jeden punkt.
+    Nie można używać MY_EXPECTED_ERROR poza plikiem main.cpp.
+    Dokumentację wystarczy napisać tylko dla dwóch klas: MyDir i MyUnique.
