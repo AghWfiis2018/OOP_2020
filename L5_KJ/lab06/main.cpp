@@ -1,3 +1,36 @@
+/*
+Tematem zadanie jest napisanie listy cyklicznej. Lista ta opiera się na
+hierarchii klas, z abstrakcyjna klasa bazowa Node, po której dziedziczą
+klasy przechowujące parametry: int, float i std::string.
+
+Kluczem do napisania takiej listy, jest trzymanie dwóch wskaźników:
+na pierwszy i ostatni element listy. Nowe elementy wkładamy po ostatnim
+elemencie ('stary' ostatni wskazuje na nowy, a nowy wskazuje na pierwszy).
+
+Klasa CyclicList przejmuje na siebie zarządzanie pamięcią.
+Kopiowanie musi być głęboka kopią - tworzymy nowe obiekty na podstawie
+starych.
+
+UWAGA:
+
+    Do zamiany liczby na string można używać metody: std::to_string.
+    W przypadku gdy mamy kilka hierarchii współpracujących ze sobą, używamy tylko i wyłącznie interfejsów (klas bazowych). Lista nie wie, jakiego typu parametry będzie przechowywac.
+    Przeładowanie operatora << musi wystąpić dwa razy. Jeden raz powinien
+    być zaimplementowany jako funkcja składowa.
+    Klasy NodeInt, NodeFloat i NodeString moga byc w jednym pliku "NodeSpec.h".
+    Jeżeli mają Państwo jakieś komentarze co do zadania lub systemu VPL, proszę mi dać znać. W VPL jest opcja komentowania, mogą też Państwo bezpośrednio do mnie napisać mail. Jeżeli nie będę wiedział o problemach, nie będę w stanie ich rozwiązać.
+
+Podstawowe zasady:
+
+    Po zakończeniu (można też w trakcie) zadania, klikamy opcję "Oceń". Nie ma żadnych kar za wielokrotne ocenianie, można testować swój program do woli. Dla krótkiego sprawdzenia kompilacji i działania używamy opcji "Kompiluj".
+    Po uzgodnieniach z innymi prowadzącymi, pracujemy tylko w edytorze VPL. Nie ma możliwości wrzucenia pliku ze swojego komputera.
+    Plik main.cpp zostanie sprawdzony przed ewaluacją. Modyfikacje mogą skutkować oceną zero.
+    Do zadania został dołączony generyczny makefile. Pozwala on na wykonanie tego zadania bez modyfikacji.
+    Plik makefile zostanie podmieniony na domyślny przed kompilacją.
+    Używanie cmake nie jest obsługiwane.
+
+*/
+
 #include "CyclicList.h"
 #include "NodeSpec.h"
 #include "Node.h"

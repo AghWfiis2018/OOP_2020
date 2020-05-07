@@ -1,3 +1,37 @@
+/*
+Zadanie polega na napisaniu dwóch klas: VirCode i Virus. W obu klasach do napisania są głównie konstruktory, destruktor i operatory przypisania. Część klasy VirCode jest już przygotowana.
+
+VirCode zapisuje materiał genetyczny wirusa. Implementacja ma oprzeć się na ciągu znaków, nie można używać żadnych kontenerów z biblioteki standardowej, nawet std::string! Klasa ma na celu sprawdzenie umiejętności zarządzania pamięcią.
+
+Mutacja polega na zmianie kolejności genów: ostatni gen wchodzi na początek.
+
+Klasa Virus to emulacja wirusa, który może się duplikować i przenosić. Przechowuje swój
+kod genetyczny i wiek.
+
+    Każda replikacja wirusa (konstruktor kopiujący i przenoszący) powoduje powstanie nowego obiektu wirusa ze zmutowanym kodem. Bazowy wirus ma niezmutowany kod.
+    Każde odwzorowanie wirusa (konstruktor i operator kopiujący) powoduje postarzenie się bazowego wirusa. Jeżeli bazowy wirus miał wiek X, to po odwzorowaniu drugi wirus ma wiek X, a bazowy wirus ma wiek X+1.
+    Wywołanie konstruktora i operatora przenoszącego nie przenosi kodu genetycznego bazowego wirusa, ale go kopiuje (nie próbujcie tego w domu).
+
+UWAGA:
+
+    Nie można używać żadnych kontenerów z biblioteki standardowej, nawet std::string!
+    Do kopiowania cstringa można użyć funkcji strlen i strcpy. Proszę pamiętać, że należy zaalokować tablicę o 1 większą niż zwraca strlen (znak \0).
+    Proszę zwrócić uwagę na możliwość optymalizacji przy tworzeniu wirusów.
+    Dla uproszczenia nie trzeba przenosić definicji do plików źródłowych.
+
+Podstawowe zasady:
+
+    Po zakończeniu (można też w trakcie) zadania, klikamy opcję "Oceń". Nie ma żadnych kar za wielokrotne ocenianie, można testować swój program do woli. Dla krótkiego sprawdzenia kompilacji i działania używamy opcji "Kompiluj".
+    Po uzgodnieniach z innymi prowadzącymi, pracujemy tylko w edytorze VPL. Nie ma możliwości wrzucenia pliku ze swojego komputera.
+    Plik main.cpp zostanie sprawdzony przed ewaluacją. Modyfikacje mogą skutkować oceną zero.
+    Do zadania został dołączony generyczny makefile. Pozwala on na wykonanie tego zadania bez modyfikacji.
+    Plik makefile zostanie podmieniony na domyślny przed kompilacją.
+    Używanie cmake nie jest obsługiwane.
+
+*/
+
+
+
 #include "VirCode.h"
 #include "Virus.h"
 #include <iostream>
