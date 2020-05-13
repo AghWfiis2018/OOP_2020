@@ -1,0 +1,23 @@
+
+length: 10, quanta: 1 0 1 0 1 
+length: 40, quanta: 1 1 0 1 0 0 1 0 
+length: 1, quanta: 0 1 
+
+-------------------------------------------------------------
+
+length: 20, quanta: 1 0 1 0 1 
+length: 120, quanta: 1 1 0 1 0 0 1 0 
+length: 120, quanta: 1 1 0 1 0 0 1 0 
+length: 20, quanta: 0 1 0 1 0 
+length: 40, quanta: 0 0 1 0 1 1 0 1 
+length: 6.28, quanta: 1 0 
+
+1 1 0 1 0 0 1 0 
+
+-------------------------------------------------------------
+
+length: 40, quanta: 1 1 0 1 0 0 1 0 
+length: 20, quanta: 1 0 1 0 1 
+length: 6.28, quanta: 1 0 
+length: 1, quanta: 0 1 
+
