@@ -1,0 +1,22 @@
+Należy napisać klasę LicznikPoziomow, która będzie nas informować o rozpoczęciu i zakończeniu obliczeń na danym poziomie.  
+
+Druga klasa jest klasa do rzucania wyjątku Calc_error, która będzie rzucana w momencie gdy obliczenia się nie udadzą. Klasę należy zaimplementować tak, aby można było odtworzyć kolejność pojawiania się wyjątków.
+
+Należy także dopisać funkcję która obsłuży dany wyjątek. W tym celu można skorzystać z dodatkowej funkcji słowa kluczowego throw. Jeżeli dany wyjątek zostanie wychwycony w bloku catch, to wewnątrz tego bloku można użyć słowa kluczowego throw bez podania typu wyjątku. Spowoduje to ponowne rzucenie ostatnio złapanego wyjątku:
+
+    try {
+        throw int(5);
+    } catch (...) {
+        std::cout << "Zlapano wyjatek..." << std::endl;
+        std::cout << "Ale nie wiem co z nim zrobic!" << std::endl;
+        std::cout << "Rzucam go dalej." << std::endl;
+
+                   // Tu rzucono wyjątek ponownie. Jaki? Ten który był złapany.
+        throw;
+    }
+
+Kod znajdujący się w bloku catch można zawsze przenieść do jakiejś funkcji. W dodatku, jeżeli ciało funkcji opakujemy blokiem try, to będziemy mogli dopisać bloki catch umożliwiające przechwycenie i obsługę wyjątków o wybranych przez nas typach.
+
+UWAGA:
+
+    Proszę zauważyć, że wyrzucane są wkaźniki. To powinno pozwolić na "przechowanie" jednego wyjątku w drugim. Jednoczenie należy zadbać o potencjalne wycieki pamięci z tym związane.
