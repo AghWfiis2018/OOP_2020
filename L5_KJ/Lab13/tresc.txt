@@ -1,0 +1,33 @@
+Należy zaimplementować prostą klasę Miotacz, który potrafi rzucić wyjątek. Do tego potrzebne są nowe klasy wyjątków, których implementację można wywnioskować na podstawie poniższego kodu.
+
+Należy także dopisać funkcję która obsłuży dany wyjątek. W tym celu można skorzystać z dodatkowej funkcji słowa kluczowego throw. Jeżeli dany wyjątek zostanie wychwycony w bloku catch, to wewnątrz tego bloku można użyć słowa kluczowego throw bez podania typu wyjątku. Spowoduje to ponowne rzucenie ostatnio złapanego wyjątku:
+
+    try {
+        throw int(5);
+    } catch (...) {
+        std::cout << "Zlapano wyjatek..." << std::endl;
+        std::cout << "Ale nie wiem co z nim zrobic!" << std::endl;
+        std::cout << "Rzucam go dalej." << std::endl;
+
+                   // Tu rzucono wyjątek ponownie. Jaki? Ten który był złapany.
+        throw;
+    }
+
+Kod znajdujący się w bloku catch można zawsze przenieść do jakiejś funkcji. W dodatku, jeżeli ciało funkcji opakujemy blokiem try, to będziemy mogli dopisać bloki catch umożliwiające przechwycenie i obsługę wyjątków o wybranych przez nas typach.
+
+UWAGA:
+
+Nie można korzystać z żadnych statycznych i globalnych zmiennych.
+Proszę zadbać o odpowiedni format wypisania adresu wskaźnika - łącznie z nawiasami i tekstem p_adr. Do poprawnego wypisania można użyć przygotowanej klasy VPL::PtrAdress. Tylko takie wypisanie wskaźnika zagwarantuje właściwe działanie skryptu oceniającego.
+[p_adr=0x1fa0da]
+Należy zwrócić uwagę gdzie adres jest identyczny!
+Proszę zadbać o zarządzanie pamięcią.
+Podstawowe zasady:
+
+Po zakończeniu (można też w trakcie) zadania, klikamy opcję "Oceń". Nie ma żadnych kar za wielokrotne ocenianie, można testować swój program do woli. Dla krótkiego sprawdzenia kompilacji i działania używamy opcji "Kompiluj".
+Jeżeli występuje, to kompilacja programu ze zdefiniowaną zmienną MY_EXPECTED_ERROR powinna wygenerować błąd kompilacji. W przeciwnym razie za wykonanie odejmowany jest jeden punkt. Zmiennej MY_EXPECTED_ERROR nie można używać poza plikiem main.cpp.
+Pracujemy tylko w edytorze VPL. Nie ma możliwości wrzucenia pliku ze swojego komputera.
+Plik main.cpp zostanie sprawdzony przed ewaluacją. Modyfikacje mogą skutkować oceną zero.
+Do zadania został dołączony generyczny makefile. Pozwala on na wykonanie tego zadania bez modyfikacji.
+Plik makefile zostanie podmieniony na domyślny przed kompilacją.
+Używanie cmake nie jest obsługiwane.
