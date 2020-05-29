@@ -1,3 +1,21 @@
+/*
+Standard C++14 wprowadza możliwość tworzenia samodzielnego szablonu zmiennej. Wcześniej takie rozwiązanie można było rozwiązać za pomocą szablonu klasy. Celem tego ćwiczenia jest próba otrzymanie tej funkcjonalności za pomocą szablonów funkcji.
+
+Wyobraźmy sobie projekt, w którym chcemy w różnych miejscach programu tworzyć takie same wartości, ale różne dla różnych typów. Ma się tym zająć klasa SetHoldRet. W rozwiązaniu należy skorzystać ze zmiennych statycznych i statycznych składników funkcji, oraz z tego, że każda instancja szablonu to oddzielna funkcja.
+
+Dodatkowo proszę napisać klasę NicePrinter z operatorem() jako szablonem, który będzie pomocny przy wypisywaniu. Do zachowania stałej szerokości prefiksu z numerem linii, najłatwiej użyć manipulatora std::setw(int n), znajdujący  się w <iomanip>, który przygotuje miejsce na n cyfr:
+
+    std::cout << std::setw(prefix_width) << number << ... ;
+
+UWAGA:
+
+    Proszę zwrócić uwagę, że sama klasa SetHoldRet nie jest szablonowa - szablonowe są tylko jej funkcje składowe.
+    Użycie samodzielnego szablonu zmiennej lub szablonu klasy do rozwiązania zadania jest traktowane jako zadanie nie na temat i skutkuje oceną zadania na 0 punktów.
+    Przez samodzielny szablon zmiennej rozumiem zmienną której szablon jest określony niezależnie od szablonu funkcji/klasy, wprowadzony w standardzie C++14 tzw. variable template:
+    https://en.cppreference.com/w/cpp/language/variable_template
+    Nie ma żadnych ograniczeń w tworzeniu zmiennych wewnątrz ciała funkcji, których typ jest określony przez szablon funkcji. 
+*/
+
 #include "NicePrinter.h"
 #include "SetHoldRet.h"
 #include <string>
