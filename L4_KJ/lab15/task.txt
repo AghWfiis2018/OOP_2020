@@ -1,0 +1,13 @@
+Proszę napisać kontener będący opakowaniem na lista dwukierunkowa. Proszę pamiętać o zarządzaniu pamięcią.
+
+Jako uzupełnienie kontenera, należy napisać podklasę Iterator, który będzie pomocny przy operacjach na kolejnych elementach tej listy. Trzeba dla niego przeładować operatory *, ->, != i ++.
+
+Nie implementujemy klasy ConstIterator, dlatego nie trzeba ich używać przy implementacji operatora >> (można użyć przyjaźni i pętli while). W domu proszę spróbować dodać te iteratory i użyć ich w implementacji operatora >>.
+
+UWAGA:
+
+    Implementujemy kontener, zatem korzystanie z gotowych kontenerów z biblioteki standardowej (za wyjątkiem std::string) jest niedozwolone.
+    Lista dwukierunkowa jest prostym rozszerzeniem listy jednokierunkowej, gdzie oprócz wskaźnika na next jest też wskaźnik na prev.
+    Funkcja append jest funkcją składową klasy std::string. Nie trzeba jej definiować! To co trzeba zrobić, to udostępnić dostęp do std::string za pomocą operatora ->.
+    Iteratory w tył to tylko małe uzupełnienie klasy dla ambitniejszych. Jeżeli ktoś ma z nimi problemy, niech ustawi rbegin/rend tak jak begin i end. Dopiero potem niech spróbuje dopracować poruszanie się w drugim kierunku.
+    Iteratory w tył (reverse iterators) implementujemy w uproszczonej wersji (zwykle jest to osobna klasa) przez dodanie flagi, w którą stronę należy przesuwać (wstecz zamiast w przód). Trzeba dobrze ustawić iteratory, np rbegin() zwraca iterator pokazujacy na koniec listy i ustawia flagę forward na false.
