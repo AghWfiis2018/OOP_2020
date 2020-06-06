@@ -1,0 +1,16 @@
+Celem zadania jest napisanie funkcji sortującej (bubble sort):
+
+    for(int i = 0; i < N; ++i)
+        for(int j = i+1; j < N; ++j)
+            if( tab[i] > tab[j] )
+                swap( tab[i], tab[j] )
+                
+Dodatkowo potrzebna jest funkcja print, która wyświetli kontener. 
+
+
+Klasa Array ma byc prostym kontenerem na typ int (mozna uzyc std::vector), z operatorem []. Jezeli zadbamy o przesylanie przez referencje, to nie trzeba definiowac konstruktora kopiujacego.
+
+UWAGA:
+
+Szablon print jest przeładowany: tj trzeba napisać szablon, który przyjmie jeden argument (przez referencje), ale rozpozna rozmiar tablicy statycznej (wskazówka: rozmiar tablicy statycznej jest częścią jej typu) lub użyje funkcji size() kontenera.
+Na końcu zadania znajduje się troszkę bardziej wymagający problem dla tych, którzy chcą dostać maksymalne 10 punktów. Ci którzy nie dadzą sobie rady mogą zakomentować te dwie linijki.
